@@ -11,7 +11,7 @@ package proyectosupermercado;
  * @version 1.0
  */
 public class Cliente {
-    
+
     private int numeroCliente;
     private String nombre;
     private String telefono;
@@ -26,7 +26,7 @@ public class Cliente {
         this.telefono = telefono;
         this.direccion = direccion;
     }
-    
+
     public Cliente(Cliente c) {
         this.numeroCliente = c.getNumeroCliente();
         this.nombre = c.getNombre();
@@ -68,8 +68,7 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente{" + "numeroCliente=" + numeroCliente + ", nombre=" + nombre + ", telefono=" + telefono + ", direccion=" + direccion + '}';
+        return "------Cliente------ \nNúmero de Cliente: " + numeroCliente + "\nNombre: " + nombre + "\nTeléfono: " + telefono + "\nDirección: " + direccion;
     }
-    
-    
+
 }

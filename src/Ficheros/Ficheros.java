@@ -9,8 +9,11 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import proyectosupermercado.Producto;
 
 /**
  *
@@ -18,7 +21,7 @@ import java.util.logging.Logger;
  */
 public class Ficheros {
 
-    public static String carga()
+    public static String cargaEmplados()
     {
         FileReader fr=null;
         BufferedReader br = null;
@@ -39,5 +42,45 @@ public class Ficheros {
             Logger.getLogger(Ficheros.class.getName()).log(Level.SEVERE, null, ex);
         }
     return cadena;
+    }
+    public static ArrayList cargaProductos()
+    {
+        ArrayList<proyectosupermercado.Producto>productos=new ArrayList<>();
+        String array[]=new String [3];
+        FileReader fr=null;
+        BufferedReader br = null;
+        String linea;
+        StringTokenizer tokens;
+        int contador=0;
+        try {
+            fr=new FileReader("productos.txt");   
+            br=new BufferedReader(fr);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Ficheros.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        String cadena = null;
+        try {
+           
+            while((linea=br.readLine())!=null)
+            {
+                tokens=new StringTokenizer(linea);
+                while(tokens.hasMoreElements()) {
+                   
+                    array[contador]=tokens.nextToken();
+                    contador++;
+                }
+                contador=0;
+                double precio=Double.parseDouble(array[2]);
+                proyectosupermercado.Producto p1=new Producto(array[0], array[1],precio);
+                System.out.println(p1);
+            productos.add(p1);
+            }
+                
+            
+        
+        } catch (IOException ex) {
+            Logger.getLogger(Ficheros.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    return productos;
     }
 }

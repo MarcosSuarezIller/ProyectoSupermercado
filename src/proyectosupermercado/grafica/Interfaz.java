@@ -5,6 +5,10 @@
  */
 package proyectosupermercado.grafica;
 
+import Ficheros.Ficheros;
+import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author DAM103
@@ -14,9 +18,11 @@ public class Interfaz extends javax.swing.JFrame {
     /**
      * Creates new form Interfaz
      */
+    DefaultTableModel modelo;
     public Interfaz() {
         initComponents();
         setLocationRelativeTo(null);
+        modelo=new DefaultTableModel();
     }
 
     /**
@@ -41,7 +47,8 @@ public class Interfaz extends javax.swing.JFrame {
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
-        textArea1 = new java.awt.TextArea();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
         Principal = new javax.swing.JPanel();
         MenuBotones = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
@@ -51,7 +58,6 @@ public class Interfaz extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1130, 430));
         setMinimumSize(new java.awt.Dimension(1130, 430));
         getContentPane().setLayout(new java.awt.CardLayout());
 
@@ -88,12 +94,12 @@ public class Interfaz extends javax.swing.JFrame {
                             .addComponent(jLabel1)
                             .addComponent(jPasswordField1, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
                             .addComponent(jTextField1))))
-                .addContainerGap(542, Short.MAX_VALUE))
+                .addContainerGap(545, Short.MAX_VALUE))
         );
         InicioLayout.setVerticalGroup(
             InicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InicioLayout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
+                .addContainerGap(194, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -138,7 +144,7 @@ public class Interfaz extends javax.swing.JFrame {
                 .addComponent(jButton8)
                 .addGap(126, 126, 126)
                 .addComponent(jButton9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
                 .addComponent(jButton10)
                 .addGap(118, 118, 118))
         );
@@ -155,21 +161,33 @@ public class Interfaz extends javax.swing.JFrame {
                 .addContainerGap(37, Short.MAX_VALUE))
         );
 
-        textArea1.setEditable(false);
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane1.setViewportView(jTable2);
 
         javax.swing.GroupLayout ClientesLayout = new javax.swing.GroupLayout(Clientes);
         Clientes.setLayout(ClientesLayout);
         ClientesLayout.setHorizontalGroup(
             ClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(MenuBotones1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(textArea1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ClientesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1)
+                .addContainerGap())
         );
         ClientesLayout.setVerticalGroup(
             ClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ClientesLayout.createSequentialGroup()
                 .addComponent(MenuBotones1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(textArea1, javax.swing.GroupLayout.DEFAULT_SIZE, 334, Short.MAX_VALUE))
+                .addComponent(jScrollPane1)
+                .addContainerGap())
         );
 
         getContentPane().add(Clientes, "card4");
@@ -206,7 +224,7 @@ public class Interfaz extends javax.swing.JFrame {
                 .addComponent(jButton4)
                 .addGap(116, 116, 116)
                 .addComponent(jButton5)
-                .addContainerGap(126, Short.MAX_VALUE))
+                .addContainerGap(129, Short.MAX_VALUE))
         );
         MenuBotonesLayout.setVerticalGroup(
             MenuBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -231,7 +249,7 @@ public class Interfaz extends javax.swing.JFrame {
             PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PrincipalLayout.createSequentialGroup()
                 .addComponent(MenuBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(181, Short.MAX_VALUE))
+                .addContainerGap(361, Short.MAX_VALUE))
         );
 
         getContentPane().add(Principal, "card3");
@@ -251,11 +269,24 @@ public class Interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Clientes.setVisible(true);
-        textArea1.setText(Ficheros.Ficheros.carga());
-        
-        Principal.setVisible(false);
+        InsertarProductos();//Cambiar
+       
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void InsertarProductos() {
+        Clientes.setVisible(true);
+        ArrayList<proyectosupermercado.Producto> array=Ficheros.cargaProductos();
+        System.out.println(array);
+        String[]columnas={"Id","Nombre","Precio"};
+        modelo=new DefaultTableModel(columnas, 0);
+        jTable2.setModel(modelo);
+        if(array!=null){
+            for(proyectosupermercado.Producto p: array){
+                modelo.addRow
+                        (new Object[]{p.getId(),p.getNombre(),p.getPrecio()});
+            }
+        }
+    }
 
     private void jButtonClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonClientesActionPerformed
        
@@ -316,7 +347,8 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable2;
     private javax.swing.JTextField jTextField1;
-    private java.awt.TextArea textArea1;
     // End of variables declaration//GEN-END:variables
 }

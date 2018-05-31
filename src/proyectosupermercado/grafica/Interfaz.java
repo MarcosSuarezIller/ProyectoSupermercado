@@ -31,10 +31,10 @@ public class Interfaz extends javax.swing.JFrame {
         Inicio = new javax.swing.JPanel();
         BotonInicio = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        txtUsuario = new javax.swing.JTextField();
+        txtPassUsuario = new javax.swing.JPasswordField();
         jLabel2 = new javax.swing.JLabel();
-        Clientes = new javax.swing.JPanel();
+        Empleados = new javax.swing.JPanel();
         MenuBotones1 = new javax.swing.JPanel();
         jButtonClientes = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
@@ -49,6 +49,15 @@ public class Interfaz extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        Productos = new javax.swing.JPanel();
+        MenuBotones2 = new javax.swing.JPanel();
+        jButtonClientes1 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
+        textArea2 = new java.awt.TextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1130, 430));
@@ -64,9 +73,9 @@ public class Interfaz extends javax.swing.JFrame {
 
         jLabel1.setText("Usuario");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtUsuarioActionPerformed(evt);
             }
         });
 
@@ -86,8 +95,8 @@ public class Interfaz extends javax.swing.JFrame {
                         .addGroup(InicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel2)
                             .addComponent(jLabel1)
-                            .addComponent(jPasswordField1, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
-                            .addComponent(jTextField1))))
+                            .addComponent(txtPassUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
+                            .addComponent(txtUsuario))))
                 .addContainerGap(542, Short.MAX_VALUE))
         );
         InicioLayout.setVerticalGroup(
@@ -96,11 +105,11 @@ public class Interfaz extends javax.swing.JFrame {
                 .addContainerGap(14, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
-                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtPassUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
                 .addComponent(BotonInicio)
                 .addGap(138, 138, 138))
@@ -157,22 +166,22 @@ public class Interfaz extends javax.swing.JFrame {
 
         textArea1.setEditable(false);
 
-        javax.swing.GroupLayout ClientesLayout = new javax.swing.GroupLayout(Clientes);
-        Clientes.setLayout(ClientesLayout);
-        ClientesLayout.setHorizontalGroup(
-            ClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout EmpleadosLayout = new javax.swing.GroupLayout(Empleados);
+        Empleados.setLayout(EmpleadosLayout);
+        EmpleadosLayout.setHorizontalGroup(
+            EmpleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(MenuBotones1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(textArea1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        ClientesLayout.setVerticalGroup(
-            ClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ClientesLayout.createSequentialGroup()
+        EmpleadosLayout.setVerticalGroup(
+            EmpleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(EmpleadosLayout.createSequentialGroup()
                 .addComponent(MenuBotones1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(textArea1, javax.swing.GroupLayout.DEFAULT_SIZE, 334, Short.MAX_VALUE))
         );
 
-        getContentPane().add(Clientes, "card4");
+        getContentPane().add(Empleados, "card4");
 
         MenuBotones.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
 
@@ -206,7 +215,7 @@ public class Interfaz extends javax.swing.JFrame {
                 .addComponent(jButton4)
                 .addGap(116, 116, 116)
                 .addComponent(jButton5)
-                .addContainerGap(126, Short.MAX_VALUE))
+                .addContainerGap(161, Short.MAX_VALUE))
         );
         MenuBotonesLayout.setVerticalGroup(
             MenuBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -218,40 +227,116 @@ public class Interfaz extends javax.swing.JFrame {
                     .addComponent(jButton3)
                     .addComponent(jButton4)
                     .addComponent(jButton5))
-                .addContainerGap(114, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 0));
 
         javax.swing.GroupLayout PrincipalLayout = new javax.swing.GroupLayout(Principal);
         Principal.setLayout(PrincipalLayout);
         PrincipalLayout.setHorizontalGroup(
             PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(MenuBotones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         PrincipalLayout.setVerticalGroup(
             PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PrincipalLayout.createSequentialGroup()
+            .addGroup(PrincipalLayout.createSequentialGroup()
                 .addComponent(MenuBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(181, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE))
         );
 
         getContentPane().add(Principal, "card3");
 
+        MenuBotones2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
+
+        jButtonClientes1.setText("Clientes");
+        jButtonClientes1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonClientes1ActionPerformed(evt);
+            }
+        });
+
+        jButton11.setText("Almacen");
+
+        jButton12.setText("Reponer");
+
+        jButton13.setText("Productos");
+
+        jButton14.setText("Empleados");
+
+        javax.swing.GroupLayout MenuBotones2Layout = new javax.swing.GroupLayout(MenuBotones2);
+        MenuBotones2.setLayout(MenuBotones2Layout);
+        MenuBotones2Layout.setHorizontalGroup(
+            MenuBotones2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MenuBotones2Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jButtonClientes1)
+                .addGap(139, 139, 139)
+                .addComponent(jButton11)
+                .addGap(143, 143, 143)
+                .addComponent(jButton12)
+                .addGap(126, 126, 126)
+                .addComponent(jButton13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
+                .addComponent(jButton14)
+                .addGap(118, 118, 118))
+        );
+        MenuBotones2Layout.setVerticalGroup(
+            MenuBotones2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MenuBotones2Layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(MenuBotones2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonClientes1)
+                    .addComponent(jButton11)
+                    .addComponent(jButton12)
+                    .addComponent(jButton13)
+                    .addComponent(jButton14))
+                .addContainerGap(37, Short.MAX_VALUE))
+        );
+
+        textArea2.setEditable(false);
+
+        javax.swing.GroupLayout ProductosLayout = new javax.swing.GroupLayout(Productos);
+        Productos.setLayout(ProductosLayout);
+        ProductosLayout.setHorizontalGroup(
+            ProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(MenuBotones2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(textArea2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        ProductosLayout.setVerticalGroup(
+            ProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ProductosLayout.createSequentialGroup()
+                .addComponent(MenuBotones2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(textArea2, javax.swing.GroupLayout.DEFAULT_SIZE, 252, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(Productos, "card4");
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * Uno de los usuarios de prueba es usuario=AlCasa01 y la pass=$Ac619 
+     *  
+     */
     private void BotonInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonInicioActionPerformed
-        Inicio.setVisible(false);
+        if(Ficheros.Ficheros.usuarioInicio(txtUsuario.getText(), txtPassUsuario.getText())==true){
+            Inicio.setVisible(false);        
+            MenuBotones.setVisible(true);
+            Principal.setVisible(true);
+        }
         
-        MenuBotones.setVisible(true);
-        Principal.setVisible(true);
     }//GEN-LAST:event_BotonInicioActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtUsuarioActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Clientes.setVisible(true);
+        Empleados.setVisible(true);
         textArea1.setText(Ficheros.Ficheros.carga());
         
         Principal.setVisible(false);
@@ -261,6 +346,10 @@ public class Interfaz extends javax.swing.JFrame {
        
     }//GEN-LAST:event_jButtonClientesActionPerformed
 
+    private void jButtonClientes1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonClientes1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonClientes1ActionPerformed
+    
     /**
      * @param args the command line arguments
      */
@@ -295,16 +384,23 @@ public class Interfaz extends javax.swing.JFrame {
             }
         });
     }
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotonInicio;
-    private javax.swing.JPanel Clientes;
+    private javax.swing.JPanel Empleados;
     private javax.swing.JPanel Inicio;
     private javax.swing.JPanel MenuBotones;
     private javax.swing.JPanel MenuBotones1;
+    private javax.swing.JPanel MenuBotones2;
     private javax.swing.JPanel Principal;
+    private javax.swing.JPanel Productos;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -313,10 +409,13 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JButton jButtonClientes;
+    private javax.swing.JButton jButtonClientes1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel jLabel3;
     private java.awt.TextArea textArea1;
+    private java.awt.TextArea textArea2;
+    private javax.swing.JPasswordField txtPassUsuario;
+    private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 }

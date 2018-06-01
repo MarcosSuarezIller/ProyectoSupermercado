@@ -54,5 +54,28 @@ public class Validaciones {
     public static boolean validaDireccion(String dire){
         return dire.matches("[a-z ]{30}");
     }
+    private String NIF;
+    private String nombre;
+    private String apellidos;
+    private String direccion;
+    private String telefono;
+    private boolean senior;
     
-}
+    public static boolean validarNif(String nif)
+    {
+        return nif.matches("[0-9]{8}[A-Z]{1}");
+    }
+    public static boolean ValidarNombreTrabajador(String nombre)
+    {
+        return nombre.matches("^[A-Z][a-z]{2,15}");
+    }
+    public static boolean validarApellido(String apellido)
+    {return apellido.matches("^[A-Z][a-z]{2,15}");}
+    public static boolean validaDirreccionTrabajdor(String direccion)
+    { return direccion.matches("[a-z ]{30}");}
+    
+    public static boolean validarTelefonoTrabajador(String telefono)
+    {return telefono.matches("[6|9|7][0-9]{8}");}
+    
+    
+            }

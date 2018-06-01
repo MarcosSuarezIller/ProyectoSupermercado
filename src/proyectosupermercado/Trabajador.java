@@ -22,11 +22,17 @@ public class Trabajador {
     }
 
     public Trabajador(String NIF, String nombre, String apellidos, String direccion, String telefono, boolean senior) {
-        this.NIF = NIF;
-        this.nombre = nombre;
-        this.apellidos = apellidos;
-        this.direccion = direccion;
-        this.telefono = telefono;
+        if(Validaciones.validarNif(NIF))
+        {
+        this.NIF = NIF;}
+        if(Validaciones.ValidarNombreTrabajador(nombre))
+        {this.nombre = nombre;}
+        if(Validaciones.validarApellido(apellidos))
+        {this.apellidos = apellidos;}
+        if(Validaciones.validaDirreccionTrabajdor(direccion))
+        {this.direccion = direccion;}
+        if(Validaciones.validarTelefonoTrabajador(telefono))
+        {this.telefono = telefono;}
         this.senior = senior;
     }
 

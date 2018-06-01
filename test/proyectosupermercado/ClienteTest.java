@@ -16,6 +16,7 @@ import static org.junit.Assert.*;
  *
  * @author DAM125
  */
+
 public class ClienteTest {
     
     public ClienteTest() {
@@ -45,7 +46,7 @@ public class ClienteTest {
         System.out.println("getNumeroCliente");
         Cliente instance = new Cliente();
         int expResult = 0;
-        int result = instance.getNumeroCliente();
+        String result = instance.getNumeroCliente();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -57,7 +58,7 @@ public class ClienteTest {
     @Test
     public void testSetNumeroCliente() {
         System.out.println("setNumeroCliente");
-        int numeroCliente = 0;
+        String numeroCliente = "";
         Cliente instance = new Cliente();
         instance.setNumeroCliente(numeroCliente);
         // TODO review the generated test code and remove the default call to fail.

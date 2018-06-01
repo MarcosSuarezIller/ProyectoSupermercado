@@ -11,24 +11,26 @@ package proyectosupermercado;
  * @version 1.0
  */
 public class Producto {
-    private int id;
+    private String id;
     private String nombre;
-    private String descripcion;
+    private double precio;
 
-    public Producto(int id, String nombre, String descripcion) {
+    public Producto(String id, String nombre, double precio) {
         this.id = id;
         this.nombre = nombre;
-        this.descripcion = descripcion;
+        this.precio = precio;
     }
+
+    
 
     public Producto() {
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -36,22 +38,28 @@ public class Producto {
         return nombre;
     }
 
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    
+    
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
     @Override
     public String toString() {
-        return "Producto" + "id: " + id + ", nombre: " + nombre + ", descripcion: " + descripcion;
+        return "Producto " + "id: " + id + ", nombre: " + nombre + ", precio: " + precio + '}';
     }
+
+   
+
+    
     
     
 }

@@ -1,0 +1,8 @@
+﻿01 Limon 3.46
+02 Fresas 3.76
+03 Frambuesa 4.86
+04 Chirimoya 4.96
+05 Arandano 4.86
+06 Aguacate 6.68
+07 Macarrones 2.25
+08 Espaguetis 2.15

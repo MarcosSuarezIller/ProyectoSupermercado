@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>TAlmacen.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;ProyectoSupermercado&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">proyectosupermercado</a> &gt; <span class="el_source">TAlmacen.java</span></div><h1>TAlmacen.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package proyectosupermercado;
+
+/**
+ *
+ * @author anamg
+ */
+public class TAlmacen extends Trabajador{
+    public int idAlmacen;
+    public String categoria;
+
+    public TAlmacen() {
+<span class="nc" id="L17">        super();</span>
+<span class="nc" id="L18">    }</span>
+
+    public TAlmacen(int idAlmacen, String categoria, String NIF, String nombre, String apellidos, String direccion, String telefono, boolean senior) {
+<span class="nc" id="L21">        super(NIF, nombre, apellidos, direccion, telefono, senior);</span>
+<span class="nc" id="L22">        this.idAlmacen = idAlmacen;</span>
+<span class="nc" id="L23">        this.categoria = categoria;</span>
+<span class="nc" id="L24">    }</span>
+
+    public int getIdAlmacen() {
+<span class="nc" id="L27">        return idAlmacen;</span>
+    }
+
+    public void setIdAlmacen(int idAlmacen) {
+<span class="nc" id="L31">        this.idAlmacen = idAlmacen;</span>
+<span class="nc" id="L32">    }</span>
+
+    public String getCategoria() {
+<span class="nc" id="L35">        return categoria;</span>
+    }
+
+    public void setCategoria(String categoria) {
+<span class="nc" id="L39">        this.categoria = categoria;</span>
+<span class="nc" id="L40">    }</span>
+
+    @Override
+    public String toString() {
+<span class="nc" id="L44">        return super.toString()+&quot;TAlmacen{&quot; + &quot;idAlmacen=&quot; + idAlmacen + &quot;, categoria=&quot; + categoria + '}';</span>
+    }
+
+    
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

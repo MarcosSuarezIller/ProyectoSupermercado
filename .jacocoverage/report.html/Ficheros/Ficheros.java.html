@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Ficheros.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;ProyectoSupermercado&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">Ficheros</a> &gt; <span class="el_source">Ficheros.java</span></div><h1>Ficheros.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Ficheros;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import proyectosupermercado.Producto;
+import proyectosupermercado.Trabajador;
+
+/**
+ *
+ * @author DAM103
+ */
+<span class="nc" id="L23">public class Ficheros {</span>
+
+    public static ArrayList cargaEmpleados() {
+<span class="nc" id="L26">        ArrayList&lt;proyectosupermercado.Trabajador&gt; trabajadores = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L27">        String array[] = new String[5];</span>
+<span class="nc" id="L28">        FileReader fr = null;</span>
+<span class="nc" id="L29">        BufferedReader br = null;</span>
+        String linea;
+        StringTokenizer tokens;
+<span class="nc" id="L32">        int contador = 0;</span>
+        try {
+<span class="nc" id="L34">            fr = new FileReader(&quot;empleados.txt&quot;);</span>
+<span class="nc" id="L35">            br = new BufferedReader(fr);</span>
+<span class="nc" id="L36">        } catch (FileNotFoundException ex) {</span>
+<span class="nc" id="L37">            Logger.getLogger(Ficheros.class.getName()).log(Level.SEVERE, null, ex);</span>
+<span class="nc" id="L38">        }</span>
+<span class="nc" id="L39">        String cadena = null;</span>
+        try {
+
+<span class="nc bnc" id="L42" title="All 2 branches missed.">            while ((linea = br.readLine()) != null) {</span>
+<span class="nc" id="L43">                tokens = new StringTokenizer(linea);</span>
+<span class="nc bnc" id="L44" title="All 2 branches missed.">                while (tokens.hasMoreElements()) {</span>
+
+<span class="nc" id="L46">                    array[contador] = tokens.nextToken();</span>
+<span class="nc" id="L47">                    contador++;</span>
+                }
+<span class="nc" id="L49">                contador = 0;</span>
+<span class="nc" id="L50">                proyectosupermercado.Trabajador p1 = new Trabajador(array[0], array[1], array[2], array[3], array[4], false);</span>
+<span class="nc" id="L51">                System.out.println(p1);</span>
+<span class="nc" id="L52">                trabajadores.add(p1);</span>
+<span class="nc" id="L53">            }</span>
+
+<span class="nc" id="L55">        } catch (IOException ex) {</span>
+<span class="nc" id="L56">            Logger.getLogger(Ficheros.class.getName()).log(Level.SEVERE, null, ex);</span>
+<span class="nc" id="L57">        }</span>
+<span class="nc" id="L58">        return trabajadores;</span>
+    }
+
+    public static ArrayList cargaProductos() {
+<span class="nc" id="L62">        ArrayList&lt;proyectosupermercado.Producto&gt; productos = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L63">        String array[] = new String[3];</span>
+<span class="nc" id="L64">        FileReader fr = null;</span>
+<span class="nc" id="L65">        BufferedReader br = null;</span>
+        String linea;
+        StringTokenizer tokens;
+<span class="nc" id="L68">        int contador = 0;</span>
+        try {
+<span class="nc" id="L70">            fr = new FileReader(&quot;productos.txt&quot;);</span>
+<span class="nc" id="L71">            br = new BufferedReader(fr);</span>
+<span class="nc" id="L72">        } catch (FileNotFoundException ex) {</span>
+<span class="nc" id="L73">            Logger.getLogger(Ficheros.class.getName()).log(Level.SEVERE, null, ex);</span>
+<span class="nc" id="L74">        }</span>
+<span class="nc" id="L75">        String cadena = null;</span>
+        try {
+
+<span class="nc bnc" id="L78" title="All 2 branches missed.">            while ((linea = br.readLine()) != null) {</span>
+<span class="nc" id="L79">                tokens = new StringTokenizer(linea);</span>
+<span class="nc bnc" id="L80" title="All 2 branches missed.">                while (tokens.hasMoreElements()) {</span>
+
+<span class="nc" id="L82">                    array[contador] = tokens.nextToken();</span>
+<span class="nc" id="L83">                    contador++;</span>
+                }
+<span class="nc" id="L85">                contador = 0;</span>
+<span class="nc" id="L86">                double precio = Double.parseDouble(array[2]);</span>
+<span class="nc" id="L87">                proyectosupermercado.Producto p1 = new Producto(array[0], array[1], precio);</span>
+<span class="nc" id="L88">                System.out.println(p1);</span>
+<span class="nc" id="L89">                productos.add(p1);</span>
+<span class="nc" id="L90">            }</span>
+
+<span class="nc" id="L92">        } catch (IOException ex) {</span>
+<span class="nc" id="L93">            Logger.getLogger(Ficheros.class.getName()).log(Level.SEVERE, null, ex);</span>
+<span class="nc" id="L94">        }</span>
+<span class="nc" id="L95">        return productos;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

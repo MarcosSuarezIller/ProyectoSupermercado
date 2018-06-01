@@ -12,7 +12,7 @@ package proyectosupermercado;
  */
 public class Cliente {
 
-    private int numeroCliente;
+    private String numeroCliente;
     private String nombre;
     private String telefono;
     private String direccion;
@@ -20,11 +20,28 @@ public class Cliente {
     public Cliente() {
     }
 
-    public Cliente(int numeroCliente, String nombre, String telefono, String direccion) {
+    public Cliente(String numeroCliente, String nombre, String telefono, String direccion) throws Exception {
+        if(Validaciones.validaNCliente(numeroCliente)){
+             this.numeroCliente = numeroCliente;
+        }
+        if(Validaciones.validaNombre(nombre)){
+            this.nombre = nombre;
+        }
+        if(Validaciones.validaTelefono(telefono)){
+            this.telefono = telefono;
+        }
+        if(Validaciones.validaDireccion(direccion)){
+            this.direccion = direccion;
+        }
+        
+    }
+
+    public String getNumeroCliente() {
+        return numeroCliente;
+    }
+
+    public void setNumeroCliente(String numeroCliente) {
         this.numeroCliente = numeroCliente;
-        this.nombre = nombre;
-        this.telefono = telefono;
-        this.direccion = direccion;
     }
 
     public Cliente(Cliente c) {
@@ -32,14 +49,6 @@ public class Cliente {
         this.nombre = c.getNombre();
         this.telefono = c.getTelefono();
         this.direccion = c.getDireccion();
-    }
-
-    public int getNumeroCliente() {
-        return numeroCliente;
-    }
-
-    public void setNumeroCliente(int numeroCliente) {
-        this.numeroCliente = numeroCliente;
     }
 
     public String getNombre() {

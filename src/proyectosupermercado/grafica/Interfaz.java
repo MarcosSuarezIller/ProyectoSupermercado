@@ -34,134 +34,80 @@ public class Interfaz extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Inicio = new javax.swing.JPanel();
-        BotonInicio = new javax.swing.JButton();
+        panelInicio = new javax.swing.JPanel();
+        txtUsuario = new javax.swing.JTextField();
+        txtpass = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
         jLabel2 = new javax.swing.JLabel();
-        Clientes = new javax.swing.JPanel();
-        MenuBotones1 = new javax.swing.JPanel();
-        jButtonClientes = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
-        Principal = new javax.swing.JPanel();
-        MenuBotones = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        panelOpera = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1130, 430));
         getContentPane().setLayout(new java.awt.CardLayout());
 
-        BotonInicio.setText("Entrar");
-        BotonInicio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonInicioActionPerformed(evt);
-            }
-        });
+        txtpass.setText("jPasswordField2");
 
         jLabel1.setText("Usuario");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-
         jLabel2.setText("Contraseña");
 
-        javax.swing.GroupLayout InicioLayout = new javax.swing.GroupLayout(Inicio);
-        Inicio.setLayout(InicioLayout);
-        InicioLayout.setHorizontalGroup(
-            InicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(InicioLayout.createSequentialGroup()
-                .addGroup(InicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(InicioLayout.createSequentialGroup()
-                        .addGap(471, 471, 471)
-                        .addComponent(BotonInicio))
-                    .addGroup(InicioLayout.createSequentialGroup()
-                        .addGap(456, 456, 456)
-                        .addGroup(InicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel1)
-                            .addComponent(jPasswordField1, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
-                            .addComponent(jTextField1))))
-                .addContainerGap(545, Short.MAX_VALUE))
-        );
-        InicioLayout.setVerticalGroup(
-            InicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, InicioLayout.createSequentialGroup()
-                .addContainerGap(194, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(BotonInicio)
-                .addGap(138, 138, 138))
-        );
-
-        getContentPane().add(Inicio, "card2");
-
-        MenuBotones1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
-
-        jButtonClientes.setText("Clientes");
-        jButtonClientes.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setText("Aceptar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonClientesActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
 
-        jButton7.setText("Almacen");
-
-        jButton8.setText("Reponer");
-
-        jButton9.setText("Productos");
-
-        jButton10.setText("Empleados");
-
-        javax.swing.GroupLayout MenuBotones1Layout = new javax.swing.GroupLayout(MenuBotones1);
-        MenuBotones1.setLayout(MenuBotones1Layout);
-        MenuBotones1Layout.setHorizontalGroup(
-            MenuBotones1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MenuBotones1Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jButtonClientes)
-                .addGap(139, 139, 139)
-                .addComponent(jButton7)
-                .addGap(143, 143, 143)
-                .addComponent(jButton8)
-                .addGap(126, 126, 126)
-                .addComponent(jButton9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
-                .addComponent(jButton10)
-                .addGap(118, 118, 118))
+        javax.swing.GroupLayout panelInicioLayout = new javax.swing.GroupLayout(panelInicio);
+        panelInicio.setLayout(panelInicioLayout);
+        panelInicioLayout.setHorizontalGroup(
+            panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelInicioLayout.createSequentialGroup()
+                .addGroup(panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelInicioLayout.createSequentialGroup()
+                        .addGap(384, 384, 384)
+                        .addGroup(panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel1)
+                            .addGroup(panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtUsuario)
+                                .addComponent(txtpass, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE))))
+                    .addGroup(panelInicioLayout.createSequentialGroup()
+                        .addGap(376, 376, 376)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(543, Short.MAX_VALUE))
         );
-        MenuBotones1Layout.setVerticalGroup(
-            MenuBotones1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MenuBotones1Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(MenuBotones1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonClientes)
-                    .addComponent(jButton7)
-                    .addComponent(jButton8)
-                    .addComponent(jButton9)
-                    .addComponent(jButton10))
-                .addContainerGap(37, Short.MAX_VALUE))
+        panelInicioLayout.setVerticalGroup(
+            panelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelInicioLayout.createSequentialGroup()
+                .addGap(131, 131, 131)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(59, 59, 59)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtpass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(67, 67, 67)
+                .addComponent(jButton1)
+                .addContainerGap(138, Short.MAX_VALUE))
         );
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        getContentPane().add(panelInicio, "card2");
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -169,117 +115,74 @@ public class Interfaz extends javax.swing.JFrame {
 
             }
         ));
-        jScrollPane1.setViewportView(jTable2);
+        jScrollPane1.setViewportView(jTable1);
 
-        javax.swing.GroupLayout ClientesLayout = new javax.swing.GroupLayout(Clientes);
-        Clientes.setLayout(ClientesLayout);
-        ClientesLayout.setHorizontalGroup(
-            ClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MenuBotones1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ClientesLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1)
-                .addContainerGap())
+        javax.swing.GroupLayout panelOperaLayout = new javax.swing.GroupLayout(panelOpera);
+        panelOpera.setLayout(panelOperaLayout);
+        panelOperaLayout.setHorizontalGroup(
+            panelOperaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1114, Short.MAX_VALUE)
         );
-        ClientesLayout.setVerticalGroup(
-            ClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ClientesLayout.createSequentialGroup()
-                .addComponent(MenuBotones1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1)
-                .addContainerGap())
+        panelOperaLayout.setVerticalGroup(
+            panelOperaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 515, Short.MAX_VALUE)
         );
 
-        getContentPane().add(Clientes, "card4");
+        getContentPane().add(panelOpera, "card3");
 
-        MenuBotones.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
+        jMenu1.setText("Operaciones");
 
-        jButton1.setText("Clientes");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem1.setText("Ver Clientes");
+        jMenu1.add(jMenuItem1);
+
+        jMenuItem2.setText("Ver Empleados");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jMenuItem2ActionPerformed(evt);
             }
         });
+        jMenu1.add(jMenuItem2);
 
-        jButton2.setText("Almacen");
+        jMenuItem3.setText("Insertar Empleado");
+        jMenu1.add(jMenuItem3);
 
-        jButton3.setText("Reponer");
+        jMenuItem4.setText("Insertar Clientes");
+        jMenu1.add(jMenuItem4);
 
-        jButton4.setText("Productos");
+        jMenuItem5.setText("Reponer Estanterias");
+        jMenu1.add(jMenuItem5);
 
-        jButton5.setText("Empleados");
+        jMenuItem6.setText("Ver estanterias");
+        jMenu1.add(jMenuItem6);
 
-        javax.swing.GroupLayout MenuBotonesLayout = new javax.swing.GroupLayout(MenuBotones);
-        MenuBotones.setLayout(MenuBotonesLayout);
-        MenuBotonesLayout.setHorizontalGroup(
-            MenuBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MenuBotonesLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jButton1)
-                .addGap(130, 130, 130)
-                .addComponent(jButton2)
-                .addGap(159, 159, 159)
-                .addComponent(jButton3)
-                .addGap(133, 133, 133)
-                .addComponent(jButton4)
-                .addGap(116, 116, 116)
-                .addComponent(jButton5)
-                .addContainerGap(129, Short.MAX_VALUE))
-        );
-        MenuBotonesLayout.setVerticalGroup(
-            MenuBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MenuBotonesLayout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addGroup(MenuBotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4)
-                    .addComponent(jButton5))
-                .addContainerGap(114, Short.MAX_VALUE))
-        );
+        jMenuBar1.add(jMenu1);
 
-        javax.swing.GroupLayout PrincipalLayout = new javax.swing.GroupLayout(Principal);
-        Principal.setLayout(PrincipalLayout);
-        PrincipalLayout.setHorizontalGroup(
-            PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MenuBotones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        PrincipalLayout.setVerticalGroup(
-            PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PrincipalLayout.createSequentialGroup()
-                .addComponent(MenuBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(361, Short.MAX_VALUE))
-        );
+        jMenu2.setText("Ayuda");
+        jMenuBar1.add(jMenu2);
 
-        getContentPane().add(Principal, "card3");
+        setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BotonInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonInicioActionPerformed
-        Inicio.setVisible(false);
-        
-        MenuBotones.setVisible(true);
-        Principal.setVisible(true);
-    }//GEN-LAST:event_BotonInicioActionPerformed
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        InsertarProductos();//Cambiar
-       
+        // TODO add your handling code here:
+        panelInicio.setVisible(false);
+        panelOpera.setVisible(true);
+        InsertarProductos();
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        InsertarEmpleados();
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
     private void InsertarProductos() {
-        Clientes.setVisible(true);
+       panelOpera.setVisible(true);
         ArrayList<proyectosupermercado.Producto> array=Ficheros.cargaProductos();
         System.out.println(array);
         String[]columnas={"Id","Nombre","Precio"};
         modelo=new DefaultTableModel(columnas, 0);
-        jTable2.setModel(modelo);
+        jTable1.setModel(modelo);
         if(array!=null){
             for(proyectosupermercado.Producto p: array){
                 modelo.addRow
@@ -287,10 +190,28 @@ public class Interfaz extends javax.swing.JFrame {
             }
         }
     }
-
-    private void jButtonClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonClientesActionPerformed
-       
-    }//GEN-LAST:event_jButtonClientesActionPerformed
+    /*
+    private String NIF;
+    private String nombre;
+    private String apellidos;
+    private String direccion;
+    private String telefono;
+    private boolean senior;
+    */
+        private void InsertarEmpleados() {
+       panelOpera.setVisible(true);
+        ArrayList<proyectosupermercado.Trabajador> array=Ficheros.cargaProductos();
+        System.out.println(array);
+        String[]columnas={"Nif","Nombre","Apellidos","Direccion","Telefono"};
+        modelo=new DefaultTableModel(columnas, 0);
+        jTable1.setModel(modelo);
+        if(array!=null){
+            for(proyectosupermercado.Trabajador p: array){
+                modelo.addRow
+                        (new Object[]{p.getNIF(),p.getNombre(),p.getApellidos(),p.getDireccion(),p.getTelefono()});
+            }
+        }
+    }
 
     /**
      * @param args the command line arguments
@@ -328,27 +249,23 @@ public class Interfaz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BotonInicio;
-    private javax.swing.JPanel Clientes;
-    private javax.swing.JPanel Inicio;
-    private javax.swing.JPanel MenuBotones;
-    private javax.swing.JPanel MenuBotones1;
-    private javax.swing.JPanel Principal;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
-    private javax.swing.JButton jButtonClientes;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JPanel panelInicio;
+    private javax.swing.JPanel panelOpera;
+    private javax.swing.JTextField txtUsuario;
+    private javax.swing.JPasswordField txtpass;
     // End of variables declaration//GEN-END:variables
 }

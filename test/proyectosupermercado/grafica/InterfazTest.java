@@ -15,6 +15,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import proyectosupermercado.Almacen;
 import proyectosupermercado.Cliente;
+import proyectosupermercado.Trabajador;
 
 /**
  *
@@ -49,11 +50,22 @@ public class InterfazTest {
         System.out.println("main");
         String[] args = null;
 //        Interfaz.main(args);
-Almacen a1 = new Almacen();
-Almacen a2 = new Almacen();
-Almacen a3 = new Almacen();
+       
+        
+        
         try {
             Cliente c1 = new Cliente("1", "Pepe", "942701083", "Calle la Pepa");
+            Cliente c2 = new Cliente(c1);
+            Cliente c3 = new Cliente();
+            
+            Trabajador t1 = new Trabajador("12345678E", "Pepe", "Lolapo", "La Pepa", "987654321", true);
+            Trabajador t2 = new Trabajador();
+            
+            Almacen a1 = new Almacen();
+            Almacen a2 = new Almacen("3", "Pipas", "65123", "Santander");
+            
+            
+            
         } catch (Exception ex) {
             Logger.getLogger(InterfazTest.class.getName()).log(Level.SEVERE, null, ex);
         }

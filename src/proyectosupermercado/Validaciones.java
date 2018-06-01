@@ -5,6 +5,9 @@
  */
 package proyectosupermercado;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author DAM103
@@ -54,12 +57,6 @@ public class Validaciones {
     public static boolean validaDireccion(String dire){
         return dire.matches("[a-z ]{30}");
     }
-    private String NIF;
-    private String nombre;
-    private String apellidos;
-    private String direccion;
-    private String telefono;
-    private boolean senior;
     
     public static boolean validarNif(String nif)
     {
@@ -77,5 +74,44 @@ public class Validaciones {
     public static boolean validarTelefonoTrabajador(String telefono)
     {return telefono.matches("[6|9|7][0-9]{8}");}
     
-    
+    public static boolean validarIdAlmacen(String id){
+        boolean o = false;
+        try {
+            int numero = Integer.parseInt(id);
+            if(numero<0)
+            {
+                throw new Exception("Error el numero no puede ser negativo");
             }
+            o=true;
+        } catch (NumberFormatException e) {
+            System.out.println("Error el parametro recibido no es un numero");
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());;
+        } 
+        return o;
+    }
+    public static boolean validarNombreAlmacen(String nombre){
+        return nombre.matches("^[A-Z][a-z]{2,15}");
+    }
+    public static boolean validarCapacidadAlmacen(String capa){
+        boolean o = false;
+        try {
+            int numero = Integer.parseInt(capa);
+            if(numero<0)
+            {
+                throw new Exception("Error el numero no puede ser negativo");
+            }
+            o=true;
+        } catch (NumberFormatException e) {
+            System.out.println("Error el parametro recibido no es un numero");
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());;
+        } 
+        return o;
+    }
+    public static boolean validarUbicacionAlmacen(String ubi){
+        return ubi.matches("^[A-Z][a-z]{2,15}");
+    }
+}
+
+

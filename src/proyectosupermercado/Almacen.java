@@ -11,26 +11,31 @@ package proyectosupermercado;
  * @version 1.0
  */
 public class Almacen {
-    private int id;
+    private String id;
     private String nombre;
-    private int capacidad;
-    private String hubicacion;
+    private String capacidad;
+    private String ubicacion;
 
-    public Almacen(int id, String nombre, int capacidad, String hubicacion) {
-        this.id = id;
+    public Almacen(String id, String nombre, String capacidad, String ubicacion) {
+        if(Validaciones.validarIdAlmacen(id)){
+            this.id = id;
+        }
+        if(Validaciones.validarNombreAlmacen(nombre))
         this.nombre = nombre;
+        if(Validaciones.validarCapacidadAlmacen(capacidad))
         this.capacidad = capacidad;
-        this.hubicacion = hubicacion;
+        if(Validaciones.validarUbicacionAlmacen(ubicacion))
+        this.ubicacion = ubicacion;
     }
 
     public Almacen() {
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -42,25 +47,25 @@ public class Almacen {
         this.nombre = nombre;
     }
 
-    public int getCapacidad() {
+    public String getCapacidad() {
         return capacidad;
     }
 
-    public void setCapacidad(int capacidad) {
+    public void setCapacidad(String capacidad) {
         this.capacidad = capacidad;
     }
 
     public String getHubicacion() {
-        return hubicacion;
+        return ubicacion;
     }
 
-    public void setHubicacion(String hubicacion) {
-        this.hubicacion = hubicacion;
+    public void setHubicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
     }
 
     @Override
     public String toString() {
-        return "Almacen" + "id: " + id + ", nombre: " + nombre + ", capacidad: " + capacidad + ", hubicacion: " + hubicacion;
+        return "Almacen" + "id: " + id + ", nombre: " + nombre + ", capacidad: " + capacidad + ", hubicacion: " + ubicacion;
     }
     
     
